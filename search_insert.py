@@ -19,19 +19,16 @@ class Solution(object):
         """
         half = int(len(nums)/2)
         first_half = nums[:half]
-        last_half= nums[half:]
-        print(first_half,"**",last_half)
+      
+        print("looking for",target,"in",nums)
 
         if target in set(first_half):
             return first_half.index(target)
                 
-      
-        elif target in last_half:
-            return nums.index(target)
-
-
         elif target not in set(nums):
             nums.append(target)
             nums.sort()
-            return(nums.index(target))
+        print(target,"indecy is/would be",nums.index(target))
+        print(nums)
+        return(nums.index(target))
 
