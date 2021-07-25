@@ -23,27 +23,15 @@ class Solution(object):
         print(first_half,"**",last_half)
 
         if target in set(first_half):
-            for idx,num in enumerate(first_half):
-                if target==num:
-                    print(idx)
+            return first_half.index(target)
                 
-            
+      
         elif target in last_half:
-            for idx,num in enumerate(last_half):
-                if target==num:
-                    print(idx)
+            return nums.index(target)
 
 
         elif target not in set(nums):
-            if target in range(first_half[0],first_half[-1]):
-                for i,num in first_half:
-                    print(i,num)
-                    if target > num[i] and target < num[i+1]:
-                        print(i+1)
-
-
-            elif target in range(last_half[0],last_half[-1]):
-                for i,num in enumerate(last_half):
-                    if target > num[i] and target < num[i+1]:
-                        print(i+1)
+            nums.append(target)
+            nums.sort()
+            return(nums.index(target))
 
