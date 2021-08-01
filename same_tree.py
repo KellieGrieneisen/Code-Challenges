@@ -14,3 +14,10 @@ class Solution(object):
         # return False
 
         
+        
+        if p == q:
+            print("trees are the same!")
+            return True
+        else:
+            print("different trees..womp womp")
+            return False
