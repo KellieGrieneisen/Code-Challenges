@@ -14,15 +14,31 @@ class Solution(object):
         print(set(nums))
         
         
-        count=0
+        s = sorted(nums)
         
-        
-        for num in nums:
-            current =nums[-1]
+        print(s)
+        for i,num in enumerate(s):
+            # current =nums[0]
             # print(num)
-            if num == current:
-                nums.pop(num)
-                nums.pop(current)
+            # print(current,"+")
+            # if len(nums) > 1 and num == current and i != 0:
+            #         nums.pop(num)
+            #         nums.pop(0)
+            num=str(num)
+            if len(nums)==1:
+                return nums
+            elif len(nums)>1 and num[i]==num[i+1]:
+                nums.pop(num[i])
+                nums.pop(num[i+1])
+            
+            
+
+            
+
+                
+                
+
+            
         print(nums)
                 
             
