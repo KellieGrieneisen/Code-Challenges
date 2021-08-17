@@ -12,6 +12,28 @@ class Solution(object):
         :rtype: int
         """
         
+
+        # the best solution to maximize space is to use XOR
+        # the xor of  a number and itself is 0
+        # the xor of a number and 0 is the number
+        # example: 7^3^4^5^3^4
+        #  can look like 7 ^(3^3)^(4^4)^(5^5)
+        #  7 ^ 0 ^ 0 ^ 0
+        # giving a return of 7
+        # solution found, read through and then tested to understanding
+        current=nums[0]
+
+        for i in range(1,len(nums)):
+            current = current ^ nums[i]
+
+        print(current)
+
+
+
+
+        # not a plausible solution.
+        # brute force code
+
         # s = sorted(nums)
         
         # print(s)
@@ -31,6 +53,9 @@ class Solution(object):
         #     elif len(s)==1:
         #         nums=s
         #         print(nums[0])
+
+
+        
                        
             
             
