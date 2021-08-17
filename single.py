@@ -11,36 +11,27 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        print(set(nums))
         
+        # s = sorted(nums)
         
-        s = sorted(nums)
-        
-        print(s)
-        for i,num in enumerate(s):
-            # current =nums[0]
-            # print(num)
-            # print(current,"+")
-            # if len(nums) > 1 and num == current and i != 0:
-            #         nums.pop(num)
-            #         nums.pop(0)
-            num=str(num)
-            if len(nums)==1:
-                return nums
-            elif len(nums)>1 and num[i]==num[i+1]:
-                nums.pop(num[i])
-                nums.pop(num[i+1])
-            
-            
-
-            
-
+        # print(s)
+        # for i,num in enumerate(s):
+           
+        #     num=str(num)
+        #     if s[i+1] != None:
+        #         try:
+                    
+        #             if s[i]==s[i+1]:
+        #                 s.remove(s[i+1])
+        #                 s.remove(s[i])
                 
-                
-
+        #         except IndexError as error:
+        #             print(nums)
             
-        print(nums)
-                
+        #     elif len(s)==1:
+        #         nums=s
+        #         print(nums[0])
+                       
             
             
                 
