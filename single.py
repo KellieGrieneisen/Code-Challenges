@@ -11,3 +11,30 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        print(set(nums))
+        
+        
+        count=0
+        
+        
+        for num in nums:
+            current =nums[-1]
+            # print(num)
+            if num == current:
+                nums.pop(num)
+                nums.pop(current)
+        print(nums)
+                
+            
+            
+                
+            
+
+            
+        
+
+            
+            
+            
+            
+            
