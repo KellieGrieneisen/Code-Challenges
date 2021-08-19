@@ -53,13 +53,24 @@ class Node(object):
         them.
         """
         count = 0
+
         for employee in self.children:
-            count =count+1
-            for emp in employee.children:
-                count=count+1
-                for e in emp.children:
-                    count=count+1
-        print(count)
+            # recursion cleanly counts each layer of a linked list with 
+            # an optimized runtime
+            count=count+1+employee.count_employees()
+        return count
+
+
+        # for employee in self.children:
+        #     count =count+1
+        #     for emp in employee.children:
+        #         count=count+1
+        #         for e in emp.children:
+        #             count=count+1
+
+
+        
+        
 
 
 
