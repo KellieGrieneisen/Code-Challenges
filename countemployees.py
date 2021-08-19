@@ -53,8 +53,12 @@ class Node(object):
         them.
         """
         count = 0
-        for self.children in self.name.children:
+        for employee in self.children:
             count =count+1
+            for emp in employee.children:
+                count=count+1
+                for e in emp.children:
+                    count=count+1
         print(count)
 
 
