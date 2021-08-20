@@ -23,6 +23,16 @@ largest::
 
 def find_range(nums):
     """Given list of numbers, return smallest & largest number as a tuple."""
+    
+    # Edgecase for empty list
+    if not nums:
+        return (None,None)
+
+    # create sorted list to easily find range 
+    sorted_list = sorted(nums)
+
+    # the first index and last index indicate the range
+    return (sorted_list[0],sorted_list[-1])
 
 
 if __name__ == '__main__':
