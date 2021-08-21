@@ -27,19 +27,22 @@ def rot_encode(shift, txt):
     alpha = list('abcdefghijklmnopqrstuvwxyz')
     Alpha=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
    
+    # create list to save encoded characters
     new_txt=[]
+
     for ch in txt:
 
-        
+        # check character against alphabets
         if ch in alpha:
             new_txt.append(alpha[(alpha.index(ch) + shift) % 26])
         elif ch in Alpha:
             new_txt.append(Alpha[(Alpha.index(ch) + shift) % 26])
             
         else:
+            # if not a character just append the symbol
             new_txt.append(ch)
 
-
+    # return as string
     return ''.join(new_txt)
 
 
