@@ -17,10 +17,31 @@ It should preserve capitalization, whitespace, and any special characters:
 'Xpx! Uijt jt 100% bnbajoh.'
 """
 
+ 
 
 def rot_encode(shift, txt):
     """Encode `txt` by shifting its characters to the right."""
-    
+    # list of the alphabet accounting for both upper and lower case. 
+    # ignore symbols.
+
+    alpha = list('abcdefghijklmnopqrstuvwxyz')
+    Alpha=list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+   
+    new_txt=[]
+    for ch in txt:
+
+        
+        if ch in alpha:
+            new_txt.append(alpha[(alpha.index(ch) + shift) % 26])
+        elif ch in Alpha:
+            new_txt.append(Alpha[(Alpha.index(ch) + shift) % 26])
+            
+        else:
+            new_txt.append(ch)
+
+
+    return ''.join(new_txt)
+
 
 
 if __name__ == '__main__':
