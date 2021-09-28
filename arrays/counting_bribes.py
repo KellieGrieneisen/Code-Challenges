@@ -18,13 +18,12 @@ def minimumBribes(q):
     
     for rider in range(0,len(q)):
      
-        if (q[rider]-1)-rider >2:
-            return(print("Too chaotic"))
-            
-        else:
-            for i in range(rider,len(q)):
-                if q[rider] > q[i]:
-                    bribes+=1
+        for i in range(rider,len(q)):
+            if (q[i]-1)-i >2:
+                return(print("Too chaotic"))
+            elif q[rider] > q[i]:
+                bribes+=1
             
                    
     print (bribes)
+            
