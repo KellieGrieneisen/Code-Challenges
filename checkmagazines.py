@@ -17,8 +17,11 @@ import sys
 def checkMagazine(magazine, note):
     # Write your code here
     
-    sub = ''.join(word for word in note if word in set(magazine))
-    if sub == str(note):
+    count=0
+    for i,word in enumerate(note):
+        if magazine.count(word) == note.count(word) and magazine.index(word) >= i:
+            count +=1
+    if count == len(note):
         print("Yes")
     else:
         print("No")
