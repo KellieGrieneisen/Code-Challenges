@@ -17,6 +17,7 @@ import sys
 def checkMagazine(magazine, note):
     # Write your code here
     
+    # First round
     # count=0
     # for i,word in enumerate(note):
     #     if magazine.count(word) == note.count(word) and magazine.index(word) >= i:
@@ -26,9 +27,19 @@ def checkMagazine(magazine, note):
     # else:
     #     print("No")
 
+    # Second round
+    # check=[]
+    # for word in note:
+    #     if word in str(magazine) and magazine.count(word) == note.count(word):
+    #         check.append(word)
+    # if ''.join(check) == ''.join(note):
+    #     print("Yes")
+    # else:
+    #     print("No")
+
     check=[]
-    for word in note:
-        if word in str(magazine) and magazine.count(word) == note.count(word):
+    for word in magazine:
+        if word in note:
             check.append(word)
     if ''.join(check) == ''.join(note):
         print("Yes")
